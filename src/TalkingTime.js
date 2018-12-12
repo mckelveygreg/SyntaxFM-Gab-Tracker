@@ -48,7 +48,7 @@ class TalkingTime extends Component {
   render() {
     return (
       <div>
-        Total Time: {this.state.day} Days : {this.state.hour} Hours : {this.state.min} Mins : {this.state.sec} Secs
+        (Total Time) => {this.state.day} Days : {this.state.hour} Hours : {this.state.min} Mins : {this.state.sec} Secs
       </div>
     );
   }

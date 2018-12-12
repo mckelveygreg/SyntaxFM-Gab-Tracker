@@ -6,11 +6,29 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <h1>SyntaxFM Gab Tracker</h1>
+        <h1>SyntaxFM Gab Tracker</h1>
         <div className="time">
           <h2>How long have Wes and Scott been talking?!</h2>
           <TalkingTime />
-          <code><a href='' >View Source Code</a></code>
+          <p>
+            Head to{" "}
+            <a
+              href="https://syntax.fm/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Syntax.fm
+            </a>{" "}
+            to hear it all!
+          </p>
+          <code>
+            <a
+              href="https://github.com/mckelveygreg/SyntaxFM-Gab-Tracker"
+              rel="noopener noreferrer"
+            >
+              View Source Code
+            </a>
+          </code>
         </div>
         <img
           src={require("./static/syntax-logo.png")}
