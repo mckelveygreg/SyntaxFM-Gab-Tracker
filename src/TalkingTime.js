@@ -19,14 +19,14 @@ class TalkingTime extends Component {
       let time = feed.items
         .map(item => item.itunes.duration) // make array of durations
         .filter(d => d) // filter out undefined
-        .concat(...missingEpidodes)
+        .concat(...missingEpidodes) // add missing episodes
         .map(d =>
           d.split(":") // make array of time values
             .map(d => parseInt(d)) // convert string to int
             .reverse() // reverse so reduce works properly
             .reduce((prev, curr, i) => prev + curr * Math.pow(60, i)) // convert everything to seconds
         )
-        .reduce((a, b) => a + b); // sum total of seconds
+        .reduce((a, b) => a + b); // SO MUCH TALKING!?!
 
         console.log(time)
       let secPerDay = 86400; // 60 * 60 * 24
@@ -48,8 +48,7 @@ class TalkingTime extends Component {
   render() {
     return (
       <div>
-        Total Time: {this.state.totalTime}, {this.state.day}:{this.state.hour}:
-        {this.state.min}:{this.state.sec}
+        Total Time: {this.state.day} Days : {this.state.hour} Hours : {this.state.min} Mins : {this.state.sec} Secs
       </div>
     );
   }
